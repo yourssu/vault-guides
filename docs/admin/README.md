@@ -5,7 +5,21 @@
 
 ---
 
-## 초기 설치 (최초 1회)
+## 1. GPG 키 생성
+
+GPG 키가 없는 경우 아래 명령어로 생성합니다.
+
+```bash
+gpg --full-generate-key
+# RSA 4096, 만료 없음 선택 권장
+
+# 키 ID 확인
+gpg --list-keys --keyid-format SHORT
+```
+
+---
+
+## 2. 초기 설치
 
 ```bash
 brew install git-crypt gpg   # macOS
@@ -14,30 +28,7 @@ brew install git-crypt gpg   # macOS
 
 ---
 
-## 복호화 (저장소 clone 후)
-
-자신의 GPG 키가 등록되어 있다면 자동으로 복호화됩니다.
-
-```bash
-git clone <repo-url>
-git-crypt unlock
-```
-
-unlock 후에는 `docs/admin/` 파일이 평문으로 보입니다.
-
----
-
-## 암호화 잠금 (작업 완료 후)
-
-```bash
-git-crypt lock
-```
-
-lock 후에는 `docs/admin/` 파일이 다시 바이너리(암호화)로 표시됩니다.
-
----
-
-## 새 팀원 등록 (관리자만 가능)
+## 3. 새 팀원 등록 (관리자만 가능)
 
 새 팀원의 GPG 공개키를 받아 등록합니다.
 
@@ -58,7 +49,20 @@ git push
 
 ---
 
-## 새 파일 추가
+## 4. 복호화 (저장소 clone 후)
+
+자신의 GPG 키가 등록되어 있다면 자동으로 복호화됩니다.
+
+```bash
+git clone <repo-url>
+git-crypt unlock
+```
+
+unlock 후에는 `docs/admin/` 파일이 평문으로 보입니다.
+
+---
+
+## 5. 새 파일 추가
 
 `docs/admin/` 안에 파일을 추가하면 `.gitattributes` 설정에 의해 자동으로 암호화됩니다.
 
@@ -69,21 +73,17 @@ git-crypt status
 
 ---
 
-## GPG 키 생성 (등록 전 준비)
-
-GPG 키가 없는 경우 아래 명령어로 생성합니다.
+## 6. 암호화 잠금 (작업 완료 후)
 
 ```bash
-gpg --full-generate-key
-# RSA 4096, 만료 없음 선택 권장
-
-# 키 ID 확인
-gpg --list-keys --keyid-format SHORT
+git-crypt lock
 ```
+
+lock 후에는 `docs/admin/` 파일이 다시 바이너리(암호화)로 표시됩니다.
 
 ---
 
-## GPG 개인키 백업
+## 7. GPG 개인키 백업
 
 개인키를 분실하면 암호화된 파일을 복구할 수 없습니다. 반드시 백업해 두세요.
 
