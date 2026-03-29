@@ -16,6 +16,7 @@
   - [그룹 네이밍 정책](#그룹-네이밍-정책)
 - [컬렉션 관리](#컬렉션-관리)
   - [컬렉션 네이밍 정책](#컬렉션-네이밍-정책)
+- [항목 네이밍 정책](#항목-네이밍-정책)
 
 ---
 
@@ -278,6 +279,46 @@ Admin Console 좌측 **컬렉션** 메뉴에서 전체 컬렉션을 확인합니
 | Edit items | (없음) | **Edit items** |
 
 > **단, Hide Passwords(비밀번호 숨기기) 는 예외입니다.** 어느 규칙 하나라도 비밀번호 숨기기가 설정되어 있으면, 다른 규칙이 더 높은 권한이어도 비밀번호는 보이지 않습니다.
+
+---
+
+## 항목 네이밍 정책
+
+항목 이름은 `{service}:{identifier}` 형식으로 지정합니다. 모두 소문자, 단어 구분은 `_`(언더스코어)를 사용합니다.
+
+**구성 규칙:**
+
+| 구성 | 규칙 | 예시 |
+|------|------|------|
+| `service` | 실제 서비스명 (도메인 포함 가능) | `google`, `github.com`, `data.ai`, `channel.io` |
+| `identifier` | 어떤 계정인지 구분하는 식별자 | `yourssu_official`, `yourssu_dev`, `backend` |
+
+**identifier 패턴:**
+
+| 패턴 | 의미 | 예시 |
+|------|------|------|
+| `yourssu_official` | 조직 공식 계정 | `instagram:yourssu_official`, `kakao:yourssu_official` |
+| `yourssu_dev` | 개발용 계정 | `google:yourssu_dev`, `gitlab:yourssu_dev` |
+| `yourssu_{purpose}` | 특정 목적 계정 | `google:yourssu_noreply`, `google:yourssu_medium` |
+| `{team}` | 특정 팀 전용 계정 | `kakao:design`, `google:backend`, `cloudflare:frontend` |
+| `{domain}` | 도메인·자산명 | `dotname:yourssu.com`, `dotname:yourssu_official` |
+
+**케이스별 예시:**
+
+| 항목 이름 | 컬렉션 | 설명 |
+|-----------|--------|------|
+| `naver:yourssu_official` | `tool:marketing` | 네이버 공식 계정 |
+| `naver:yourssu_operations` | `tool:hr` | 네이버 운영 계정 |
+| `google:yourssu_dev` | `infra:account` | 개발용 구글 계정 |
+| `google:backend` | `infra:account` | 백엔드팀 구글 계정 |
+| `google:yourssu_noreply` | `infra:account` | 시스템 메일 발송용 계정 |
+| `kakao:design` | `tool:design` | 디자인팀 카카오 계정 |
+| `cloudflare:frontend` | `web:account` | 프론트엔드 Cloudflare 계정 |
+| `dotname:yourssu.com` | `infra:account` | yourssu.com 도메인 관리 계정 |
+| `channel.io:yourssu_official` | `tool:marketing`, `shared:common` | 채널톡 공식 계정 |
+| `facebook:yourssu_rookie` | `tool:marketing` | 루키 대상 페이스북 계정 |
+
+> 서비스명에 `.`이 포함된 경우 그대로 사용합니다 (예: `github.com`, `data.ai`, `channel.io`, `club_onion`).
 
 ---
 

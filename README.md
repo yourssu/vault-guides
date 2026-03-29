@@ -30,13 +30,13 @@ Vault는 유어슈 구성원들이 함께 쓰는 **비밀번호 관리 서비스
 
 **크롬 확장 프로그램**
 1. [Bitwarden 크롬 확장 프로그램](https://chromewebstore.google.com/detail/bitwarden-password-manage/nngceckbapebfimnlniiiahkandclblb) 설치
-2. 확장 프로그램 실행 → 화면 아래 **"접근 중: bitwarden.com"** 클릭 → **자체 호스팅** 선택
+2. 확장 프로그램 실행 → 화면 아래 **"접근 중: bitwarden.com"** 클릭 → **자체 호스팅(Self-hosted)** 선택
 3. 서버 URL에 `https://vault.yourssu.com` 입력 후 저장
 4. 이메일·마스터 비밀번호 입력 → 이메일로 온 인증 코드 입력
 
 **모바일 앱**
 1. [App Store](https://apps.apple.com/app/bitwarden-password-manager/id1137397744) / [Google Play](https://play.google.com/store/apps/details?id=com.x8bit.bitwarden) 에서 Bitwarden 설치
-2. 로그인 화면 하단 서버 주소 탭 → **자체 호스팅** → `https://vault.yourssu.com` 입력
+2. 로그인 화면 하단 서버 주소 탭 → **자체 호스팅(Self-hosted)** → `https://vault.yourssu.com` 입력
 3. 이메일·마스터 비밀번호 입력 → 이메일로 온 인증 코드 입력
 
 ---
