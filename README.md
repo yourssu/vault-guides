@@ -15,7 +15,7 @@ Vault는 유어슈 구성원들이 함께 쓰는 **비밀번호 관리 서비스
 
 ### 회원가입
 
-> Vault는 관리자 초대를 받아야 가입할 수 있어요. 슬랙에서 백엔드 리드(@leopold) 또는 인프라 담당(@ducks)에게 요청해 주세요.
+> Vault는 관리자 초대를 받아야 가입할 수 있어요. 슬랙에서 백엔드 리드(@leopold) 또는 인프라 담당자(@ducks)에게 요청해 주세요.
 
 1. `nickname.urssu@gmail.com` 받은편지함(스팸메일함 포함)에서 **Yourssu Vault** 발신 초대 메일 확인 후 **Join Organization Now** 클릭
 2. 이메일(`nickname.urssu@gmail.com`), 이름(`닉네임 [파트]`), 마스터 비밀번호 입력 후 **계정 만들기**
