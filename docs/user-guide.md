@@ -47,7 +47,7 @@ Vault는 **종단간 암호화(E2E Encryption)** 기술을 사용해요.
 
 **① 초대 메일 열기**
 
-**Yourssu Vault**에서 보낸 메일을 확인하고 **Join Organization Now** 버튼을 클릭해요.
+`nickname.urssu@gmail.com` 받은편지함에서 **Yourssu Vault** 발신 초대 메일을 확인하고 **Join Organization Now** 버튼을 클릭해요.
 
 > 메일이 안 보이면 **스팸 메일함**도 확인해 보세요.
 
