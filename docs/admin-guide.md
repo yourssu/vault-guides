@@ -60,6 +60,9 @@
 초대받은 멤버의 이메일로 아래와 같은 초대 메일이 발송됩니다.
 멤버는 **Join Organization Now** 버튼을 클릭해 가입을 시작합니다.
 
+> **초대는 Gmail 계정으로만 가능합니다.**
+> Vault는 자체 호스팅(self-hosted) 서버에서 메일을 발송하므로 Gmail 외 메일 서비스는 초대 메일 수신이 보장되지 않습니다. 반드시 `@gmail.com` 주소로만 초대하세요.
+
 ![초대 이메일](images/email-invite.png)
 
 ---
