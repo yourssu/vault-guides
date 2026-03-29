@@ -4,6 +4,11 @@ Vault는 yourssu 팀이 함께 쓰는 **비밀번호 관리 서비스**예요.
 
 > 서비스 주소: https://vault.yourssu.com
 
+## 문서
+
+- [사용자 가이드](docs/user-guide.md) — 상세 설정 및 사용법
+- [관리자 가이드](docs/admin-guide.md) — 구성원 초대, 그룹/컬렉션 관리
+
 ---
 
 ## Quick Guide
@@ -42,9 +47,3 @@ Vault는 yourssu 팀이 함께 쓰는 **비밀번호 관리 서비스**예요.
 - **OTP 코드**: Bitwarden이 자동으로 생성 → 클립보드에 복사됨 → 붙여넣기(Ctrl+V)
 - **새 항목 저장**: 확장 프로그램 팝업 → **+ 새 항목** → 유형 선택 후 저장
 
----
-
-## 문서
-
-- [사용자 가이드](docs/user-guide.md) — 상세 설정 및 사용법
-- [관리자 가이드](docs/admin-guide.md) — 구성원 초대, 그룹/컬렉션 관리
