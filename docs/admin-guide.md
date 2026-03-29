@@ -290,7 +290,7 @@ Admin Console 좌측 **컬렉션** 메뉴에서 전체 컬렉션을 확인합니
 
 | 구성 | 규칙 | 예시 |
 |------|------|------|
-| `service` | 실제 서비스명 (도메인 포함 가능) | `google`, `github.com`, `data.ai`, `channel.io` |
+| `service` | 실제 서비스명 (도메인 포함 가능) | `google`, `data.ai`, `channel.io` |
 | `identifier` | 어떤 계정인지 구분하는 식별자 | `yourssu_official`, `yourssu_dev`, `backend` |
 
 **identifier 패턴:**
