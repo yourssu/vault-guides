@@ -171,27 +171,35 @@ Admin Console 좌측 **컬렉션** 메뉴에서 전체 컬렉션을 확인합니
 
 컬렉션 이름은 `{scope}:{resource}` 형식으로 지정합니다. 모두 소문자, 단어 구분은 `-`(하이픈)을 사용합니다.
 
-| 스코프 | 의미 | 예시 | 대상 그룹 |
-|--------|------|------|-----------|
-| `android:` | 안드로이드 앱 자격증명 | `android:keystore`, `android:api-key` | `team:android` |
-| `ios:` | iOS 앱 자격증명 | `ios:cert`, `ios:api-key` | `team:ios` |
-| `web:` | 웹 프론트엔드 자격증명 | `web:api-key`, `web:oauth` | `team:fe` |
-| `infra:` | 서버·DB·클라우드 인프라 자격증명 | `infra:database`, `infra:cloud`, `infra:server` | infra 담당자 |
-| `tool:` | 팀별 SaaS·업무 도구 자격증명 | `tool:finance`, `tool:hr`, `tool:marketing` | 각 비개발팀 |
-| `shared:` | 전사 공용 자격증명 | `shared:common` | `org:urssu` |
+모든 컬렉션은 `{scope}:{type}` 형식으로 지정합니다. `type`은 `key` 또는 `config` 둘 중 하나입니다.
 
-> 개발팀은 각자의 플랫폼 스코프(`android`, `ios`, `web`)를 사용하므로 어느 컬렉션에 넣을지 항상 명확합니다.
+- **`key`** — 유출 시 직접적인 피해가 생기는 민감한 자격증명 (서명 키, 계정, IAM)
+- **`config`** — 앱·서버 구동에 필요한 설정값 (API 키, 설정 파일, 접속 정보)
 
-현재 운영 중인 컬렉션:
-| 컬렉션 | 용도 |
-|--------|------|
-| `shared:common` | 전체 공용 계정 |
-| `기본 컬렉션` | 미분류 항목 기본 보관함 |
+| 컬렉션 | 내용 | 대상 그룹 |
+|--------|------|-----------|
+| `android:key` | keystore, Play Console 계정 | `team:android` |
+| `android:config` | API 키, google-services.json 등 설정 파일 | `team:android` |
+| `ios:key` | 인증서, App Store Connect 계정 | `team:ios` |
+| `ios:config` | API 키, 설정 파일 | `team:ios` |
+| `web:key` | OAuth secret, API secret | `team:fe` |
+| `web:config` | 설정 파일, 환경변수 | `team:fe` |
+| `infra:key` | SSH 키, 클라우드 IAM 자격증명 | infra 담당자 |
+| `infra:config` | DB 접속 정보, 서버 설정 | infra 담당자 |
+| `tool:finance` | 재무팀 SaaS·업무 도구 | `team:finance` |
+| `tool:hr` | 인사팀 SaaS·업무 도구 | `team:hr` |
+| `tool:marketing` | 마케팅팀 SaaS·업무 도구, SNS 계정 | `team:marketing` |
+| `tool:legal` | 법무팀 SaaS·업무 도구 | `team:legal` |
+| `tool:design` | 디자인팀 SaaS·업무 도구 | `team:design` |
+| `tool:pm` | PM팀 SaaS·업무 도구 | `team:pm` |
+| `shared:common` | 전사 공용 계정 | `org:urssu` |
+
+현재 운영 중인 컬렉션은 위 표를 기준으로 총 **15개**로 고정합니다. 새 컬렉션이 필요한 경우 관리자에게 문의하세요.
 
 ### 새 컬렉션 만들기
 
 1. 우측 상단 **+ 새 컬렉션** 클릭
-2. 컬렉션 이름 입력 — 네이밍 정책에 따라 `{scope}:{resource}` 형식으로 작성 (예: `android:keystore`, `tool:hr`)
+2. 컬렉션 이름 입력 — 네이밍 정책에 따라 `{scope}:{type}` 형식으로 작성 (예: `android:key`, `tool:hr`)
 3. 접근을 허용할 **그룹** 또는 **멤버** 선택 후 권한 설정
 4. 저장
 
@@ -238,16 +246,16 @@ Admin Console 좌측 **컬렉션** 메뉴에서 전체 컬렉션을 확인합니
 
 | 컬렉션 | 접근 그룹 |
 |--------|----------|
-| `android:*` | `team:android` |
-| `ios:*` | `team:ios` |
-| `web:*` | `team:fe` |
-| `infra:*` | infra 담당자 |
+| `android:key`, `android:config` | `team:android` |
+| `ios:key`, `ios:config` | `team:ios` |
+| `web:key`, `web:config` | `team:fe` |
+| `infra:key`, `infra:config` | infra 담당자 |
 | `tool:finance` | `team:finance` |
 | `tool:hr` | `team:hr` |
 | `tool:marketing` | `team:marketing` |
 | `tool:legal` | `team:legal` |
-| `tool:pm` | `team:pm` |
 | `tool:design` | `team:design` |
+| `tool:pm` | `team:pm` |
 | `shared:common` | `org:urssu` |
 
 새 컬렉션이 필요하면 독립된 이름으로 생성하고, 해당 그룹에 권한을 부여하세요.
