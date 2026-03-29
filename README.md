@@ -51,3 +51,12 @@ Vault는 유어슈 구성원들이 함께 쓰는 **비밀번호 관리 서비스
 - **OTP 코드**: Bitwarden이 자동으로 생성 → 클립보드에 복사됨 → 붙여넣기(Ctrl+V)
 - **새 항목 저장**: 확장 프로그램 팝업 → **+ 새 항목** → 유형 선택 후 저장
 
+---
+
+## 기여자
+
+| GitHub | 이메일 | 역할 | 참여일 |
+|--------|--------|------|--------|
+| [@dwl21](https://github.com/dwl21) | leopold.urssu@gmail.com | 백엔드 리드 | 2026.03.28 ~ |
+| [@anozanami](https://github.com/anozanami) | ducks.urssu@gmail.com | 인프라 담당 | 2026.03.28 ~ |
+
