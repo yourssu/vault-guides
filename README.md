@@ -1,6 +1,6 @@
 # Vault 사용 가이드
 
-Vault는 yourssu 팀이 함께 쓰는 **비밀번호 관리 서비스**예요.
+Vault는 Yourssu 구성원들이 함께 쓰는 **비밀번호 관리 서비스**예요.
 
 > 서비스 주소: https://vault.yourssu.com
 
