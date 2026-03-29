@@ -49,7 +49,7 @@ Vault는 **종단간 암호화(E2E Encryption)** 기술을 사용해요.
 
 `nickname.urssu@gmail.com` 받은편지함에서 **Yourssu Vault** 발신 초대 메일을 확인하고 **Join Organization Now** 버튼을 클릭해요.
 
-> 초대는 Gmail 계정으로만 가능해요. 받은편지함에 없다면 **스팸 메일함**도 확인해 보세요.
+> 초대는 `@gmail.com` 계정으로만 가능해요. 조직 설정에서 Gmail로 제한되어 있어요. 받은편지함에 없다면 **스팸 메일함**도 확인해 보세요.
 
 ![초대 이메일](images/email-invite.png)
 
