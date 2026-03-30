@@ -1,2 +1,2 @@
-docs/operator/** filter=git-crypt diff=git-crypt
-docs/operator/README.md !filter !diff
+admin/** filter=git-crypt diff=git-crypt
+admin/README.md !filter !diff
