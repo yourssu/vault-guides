@@ -1,6 +1,6 @@
 # 암호화 설정 가이드
 
-`docs/admin/` 디렉토리는 [git-crypt](https://github.com/AGWA/git-crypt)와 GPG를 사용해 암호화됩니다.
+`docs/operator/` 디렉토리는 [git-crypt](https://github.com/AGWA/git-crypt)와 GPG를 사용해 암호화됩니다.
 등록된 GPG 키를 가진 관리자만 내용을 확인할 수 있습니다. GPG 키 등록 문의는 [README의 기여자](../../README.md#기여자)에게 연락하세요.
 
 ---
@@ -58,13 +58,13 @@ git clone <repo-url>
 git-crypt unlock
 ```
 
-unlock 후에는 `docs/admin/` 파일이 평문으로 보입니다.
+unlock 후에는 `docs/operator/` 파일이 평문으로 보입니다.
 
 ---
 
 ## 5. 새 파일 추가
 
-`docs/admin/` 안에 파일을 추가하면 `.gitattributes` 설정에 의해 자동으로 암호화됩니다.
+`docs/operator/` 안에 파일을 추가하면 `.gitattributes` 설정에 의해 자동으로 암호화됩니다.
 
 ```bash
 # 암호화 상태 확인
@@ -79,7 +79,7 @@ git-crypt status
 git-crypt lock
 ```
 
-lock 후에는 `docs/admin/` 파일이 다시 바이너리(암호화)로 표시됩니다.
+lock 후에는 `docs/operator/` 파일이 다시 바이너리(암호화)로 표시됩니다.
 
 ---
 
@@ -107,7 +107,7 @@ gpg --import <NICKNAME>-private.asc
 
 | 파일 | 역할 |
 |------|------|
-| `.gitattributes` | 암호화 대상 경로 지정 (`docs/admin/**`) |
+| `.gitattributes` | 암호화 대상 경로 지정 (`docs/operator/**`) |
 | `.gitignore` | `*-private.asc` 커밋 방지 |
 | `.git-crypt/` | git-crypt 내부 설정 및 GPG로 암호화된 대칭키 저장 |
 | `*-private.asc` | GPG 개인키 백업 파일 (로컬 전용, git 제외) |
